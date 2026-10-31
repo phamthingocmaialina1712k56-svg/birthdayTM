@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8cce0">
+<title>Chúc mừng sinh nhật Vũ Thanh Mai</title>
+<style>
+  :root{--pink:#f7bfd7;--rose:#d96f9e;--deep:#8f456c;--cream:#fff7fb;--gold:#ffe7a8}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;min-height:100vh;overflow-x:hidden;font-family:Georgia,"Times New Roman",serif;color:#743b5b;background:radial-gradient(circle at 50% 15%,#fff4fa 0,#f8cfe3 36%,#d7b8e9 100%)}
+  button{font:inherit;cursor:pointer}
+  .scene{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:28px 16px;isolation:isolate}
+  .glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 50%,#fff8 0,transparent 55%)}
+  .sparkle{position:fixed;z-index:5;pointer-events:none;color:#fff7cf;text-shadow:0 0 9px #fff,0 0 18px #f4a8d0;animation:twinkle 2s ease-in-out infinite alternate}
+  @keyframes twinkle{from{opacity:.25;transform:scale(.65) rotate(0)}to{opacity:1;transform:scale(1.2) rotate(25deg)}}
+  .petal{position:fixed;top:-30px;z-index:4;pointer-events:none;color:#fff0f7;animation:fall linear forwards;text-shadow:0 0 8px #fff}
+  @keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(650deg);opacity:.15}}
+  .intro{text-align:center;max-width:900px;z-index:1}
+  .eyebrow{letter-spacing:.22em;text-transform:uppercase;font:600 12px Arial,sans-serif;color:#a55b82}
+  h1{font-size:clamp(2.3rem,7vw,5.6rem);line-height:1.08;margin:18px 0;color:#fff9fd;text-shadow:0 2px 0 #d985b0,0 0 10px #fff,0 0 28px #d45b9b;animation:shimmer 3s ease-in-out infinite alternate}
+  @keyframes shimmer{from{filter:brightness(.98)}to{filter:brightness(1.25)}}
+  .subtitle{font-size:clamp(1rem,2.5vw,1.3rem);margin:0 auto 26px;max-width:620px;line-height:1.7}
+  .pill{border:1px solid #fff;background:linear-gradient(135deg,#fff9fc,#f4b4d1);color:#8e4169;border-radius:999px;padding:13px 24px;box-shadow:0 8px 24px #b85e8c33;transition:.25s}
+  .pill:hover{transform:translateY(-3px);box-shadow:0 12px 28px #b85e8c55}
+  .hidden{display:none!important}
+  .gallery-wrap{width:min(900px,100%);text-align:center;z-index:1}
+  .section-title{font-size:clamp(2rem,5vw,3.5rem);color:#fff;text-shadow:0 2px 12px #b64f88;margin:0 0 8px}
+  .hint{margin:0 0 16px;line-height:1.6}
+  .orbit{width:min(76vw,560px);height:min(76vw,560px);min-width:290px;min-height:290px;max-width:560px;max-height:560px;position:relative;margin:0 auto 18px;border:1px dashed #fff9;border-radius:50%;animation:orbitSpin 34s linear infinite}
+  @keyframes orbitSpin{to{transform:rotate(360deg)}}
+  .flower-core{position:absolute;left:50%;top:50%;width:35%;height:35%;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,#fff9 0,#f6c0d9aa 60%,transparent 72%);box-shadow:0 0 45px #fff8}
+  .flower-core span{font-size:clamp(4rem,12vw,7rem);filter:drop-shadow(0 5px 7px #b95e8b55);animation:flowerPulse 3s ease-in-out infinite alternate}
+  @keyframes flowerPulse{to{transform:scale(1.09) rotate(-5deg)}}
+  .photo{position:absolute;width:clamp(66px,13vw,112px);aspect-ratio:4/5;background:#fffafc;padding:7px 7px 19px;border:1px solid #fff;box-shadow:0 7px 20px #9e527533;border-radius:4px;cursor:pointer;animation:photoAppear .7s both}
+  .photo img{display:block;width:100%;height:100%;object-fit:cover;background:linear-gradient(135deg,#f8d8e7,#d7c4ed)}
+  .photo .placeholder{position:absolute;inset:7px 7px 19px;display:grid;place-items:center;background:linear-gradient(145deg,#ffe6f1,#eadcf7);font-size:clamp(1.3rem,4vw,2.4rem)}
+  .photo:nth-of-type(2){left:50%;top:-5%;transform:translateX(-50%) rotate(-7deg)}
+  .photo:nth-of-type(3){right:5%;top:4%;transform:rotate(8deg)}
+  .photo:nth-of-type(4){right:-4%;top:36%;transform:rotate(-6deg)}
+  .photo:nth-of-type(5){right:5%;bottom:2%;transform:rotate(6deg)}
+  .photo:nth-of-type(6){left:50%;bottom:-5%;transform:translateX(-50%) rotate(-5deg)}
+  .photo:nth-of-type(7){left:5%;bottom:2%;transform:rotate(-8deg)}
+  .photo:nth-of-type(8){left:-4%;top:36%;transform:rotate(7deg)}
+  .photo:nth-of-type(9){left:5%;top:4%;transform:rotate(-6deg)}
+  .photo:nth-of-type(10){left:24%;top:-3%;transform:rotate(5deg)}
+  .photo:nth-of-type(11){right:24%;bottom:-3%;transform:rotate(-5deg)}
+  .photo:nth-of-type(12){right:24%;top:-3%;transform:rotate(7deg)}
+  @keyframes photoAppear{from{opacity:0;scale:.4}to{opacity:1;scale:1}}
+  .orbit .photo{left:50%;top:50%;transform:translate(-50%,-50%);animation:floatPhoto 4s ease-in-out infinite alternate}
+  @keyframes floatPhoto{to{filter:drop-shadow(0 10px 10px #b85e8c30)}}
+  .photo-modal{position:fixed;inset:0;z-index:20;background:#4c2449c9;display:grid;place-items:center;padding:20px}
+  .photo-modal img{max-width:min(90vw,700px);max-height:78vh;border:10px solid #fff8fc;box-shadow:0 20px 60px #2c1237}
+  .close-modal{position:absolute;top:20px;right:22px;border:0;border-radius:50%;width:44px;height:44px;background:#fff;color:#854468;font-size:25px}
+  .letter-area{z-index:1;text-align:center;width:min(760px,100%)}
+  .dove{font-size:clamp(3.3rem,10vw,6rem);filter:drop-shadow(0 5px 7px #a95e8b55);animation:doveBob 2.6s ease-in-out infinite}
+  @keyframes doveBob{50%{transform:translateY(-8px) rotate(-3deg)}}
+  .envelope{position:relative;margin:4px auto 0;width:min(440px,90vw);height:260px;border-radius:12px;background:linear-gradient(145deg,#fff7fb,#f6bfd8);box-shadow:0 18px 45px #99517b33;border:1px solid #fff;display:grid;place-items:center;overflow:hidden}
+  .envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 49.5%,#e9a5c4 50%,transparent 50.5%),linear-gradient(35deg,transparent 49.5%,#f1b3d0 50%,transparent 50.5%);opacity:.7}
+  .envelope-seal{position:relative;z-index:1;font-size:3.4rem;filter:drop-shadow(0 3px 4px #b75e8b55)}
+  .open-letter{position:absolute;z-index:2;bottom:24px;left:50%;transform:translateX(-50%);white-space:nowrap}
+  .letter{max-width:700px;margin:26px auto 0;padding:clamp(24px,5vw,42px);text-align:left;line-height:1.9;background:linear-gradient(135deg,#fffafc,#ffe8f2);border:1px solid #fff;border-radius:8px;box-shadow:0 16px 40px #96507830;animation:letterIn .8s ease both}
+  @keyframes letterIn{from{opacity:0;transform:translateY(22px) scale(.98)}to{opacity:1;transform:none}}
+  .letter h2{text-align:center;color:#b65081;font-size:clamp(1.4rem,4vw,2rem);margin:0 0 16px}
+  .letter p{margin:0 0 12px}
+  .signature{text-align:right;color:#b65081;font-style:italic}
+  .music-control{position:fixed;right:16px;bottom:16px;z-index:30;border:1px solid #fff;background:#fff9fce8;color:#9d4d77;border-radius:999px;padding:11px 15px;box-shadow:0 5px 18px #96507830}
+  .footnote{font:12px/1.6 Arial,sans-serif;opacity:.75;margin-top:15px}
+  @media(max-width:480px){.scene{padding:24px 12px}.orbit{width:82vw;height:82vw;min-width:280px;min-height:280px}.envelope{height:230px}.photo{padding:5px 5px 15px}.photo .placeholder{inset:5px 5px 15px}}
+  @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <audio id="bgMusic" loop preload="none">
+    <!-- Đặt file nhạc tên music.mp3 cùng thư mục với index.html -->
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-control" id="musicToggle" aria-label="Bật hoặc tắt nhạc">♫ Bật nhạc</button>
+
+  <main>
+    <section class="scene" id="opening">
+      <div class="intro">
+        <div class="eyebrow">A little birthday surprise</div>
+        <h1>Chúc mừng sinh nhật<br>Vũ Thanh Mai</h1>
+        <p class="subtitle">Một món quà nhỏ xinh, được gửi đến em bằng thật nhiều yêu thương.</p>
+        <button class="pill" id="startBtn">Chạm để khám phá ✨</button>
+      </div>
+    </section>
+
+    <section class="scene hidden" id="gallerySection">
+      <div class="gallery-wrap">
+        <div class="eyebrow">Memories in orbit</div>
+        <h2 class="section-title">Một vòng kỷ niệm</h2>
+        <p class="hint">Những khoảnh khắc nhỏ xoay quanh một đóa hồng pastel 🌸<br>Chạm vào ảnh để xem lớn.</p>
+        <div class="orbit" id="orbit">
+          <div class="flower-core"><span>🌹</span></div>
+          <button class="photo" data-photo="photos/photo1.jpg" aria-label="Xem ảnh kỷ niệm 1"><span class="placeholder">📸</span></button>
+          <button class="photo" data-photo="photos/photo2.jpg" aria-label="Xem ảnh kỷ niệm 2"><span class="placeholder">💗</span></button>
+          <button class="photo" data-photo="photos/photo3.jpg" aria-label="Xem ảnh kỷ niệm 3"><span class="placeholder">🌷</span></button>
+          <button class="photo" data-photo="photos/photo4.jpg" aria-label="Xem ảnh kỷ niệm 4"><span class="placeholder">🎀</span></button>
+          <button class="photo" data-photo="photos/photo5.jpg" aria-label="Xem ảnh kỷ niệm 5"><span class="placeholder">🧸</span></button>
+          <button class="photo" data-photo="photos/photo6.jpg" aria-label="Xem ảnh kỷ niệm 6"><span class="placeholder">💐</span></button>
+          <button class="photo" data-photo="photos/photo7.jpg" aria-label="Xem ảnh kỷ niệm 7"><span class="placeholder">🌸</span></button>
+          <button class="photo" data-photo="photos/photo8.jpg" aria-label="Xem ảnh kỷ niệm 8"><span class="placeholder">🐰</span></button>
+          <button class="photo" data-photo="photos/photo9.jpg" aria-label="Xem ảnh kỷ niệm 9"><span class="placeholder">🎀</span></button>
+          <button class="photo" data-photo="photos/photo10.jpg" aria-label="Xem ảnh kỷ niệm 10"><span class="placeholder">💐</span></button>
+          <button class="photo" data-photo="photos/photo11.jpg" aria-label="Xem ảnh kỷ niệm 11"><span class="placeholder">💞</span></button>
+        </div>
+        <button class="pill" id="toLetterBtn">Tiếp tục đến lá thư 💌</button>
+        <p class="footnote">11 bức ảnh kỷ niệm của hai bạn đang xoay quanh đóa hồng.</p>
+      </div>
+    </section>
+
+    <section class="scene hidden" id="letterSection">
+      <div class="letter-area">
+        <div class="dove" aria-hidden="true">🕊️</div>
+        <p class="hint">Một chú bồ câu mang đến lá thư dành riêng cho em.</p>
+        <div class="envelope">
+          <div class="envelope-seal">💌</div>
+          <button class="pill open-letter" id="openLetterBtn">Bấm mở thư ♡</button>
+        </div>
+        <article class="letter hidden" id="letterContent">
+          <h2>Happy Birthday Thanh Mai! 🎂</h2>
+          <p>Chúc em tuổi mới luôn vui vẻ, khỏe mạnh, chăm ngoan, học giỏi và đạt được thật nhiều thành tích tốt.</p>
+          <p>Mong em luôn giữ được sự hồn nhiên, tự tin và ngày càng trưởng thành hơn nhé!</p>
+          <p>Chúc bé có một ngày sinh nhật thật đáng nhớ!</p>
+          <p class="signature">Gửi em thật nhiều lời chúc tốt đẹp ♡</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="photo-modal hidden" id="photoModal" role="dialog" aria-modal="true" aria-label="Ảnh kỷ niệm phóng to">
+    <button class="close-modal" id="closeModal" aria-label="Đóng">×</button>
+    <img id="modalImage" alt="Ảnh kỷ niệm">
+  </div>
+
+<script>
+  const $ = (s) => document.querySelector(s);
+  const music = $('#bgMusic');
+  const musicToggle = $('#musicToggle');
+  let musicOn = false;
+
+  async function startMusic(){
+    try {
+      await music.play();
+      musicOn = true;
+      musicToggle.textContent = '♫ Tắt nhạc';
+    } catch (e) {
+      musicToggle.textContent = '♫ Chạm để bật nhạc';
+    }
+  }
+  musicToggle.addEventListener('click', async () => {
+    if (music.paused) await startMusic();
+    else { music.pause(); musicOn = false; musicToggle.textContent = '♫ Bật nhạc'; }
+  });
+
+  function revealSection(section){
+    section.classList.remove('hidden');
+    section.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  $('#startBtn').addEventListener('click', () => {
+    startMusic();
+    burstSparkles(55);
+    revealSection($('#gallerySection'));
+  });
+  $('#toLetterBtn').addEventListener('click', () => {
+    revealSection($('#letterSection'));
+    burstSparkles(24);
+  });
+  $('#openLetterBtn').addEventListener('click', () => {
+    $('#letterContent').classList.remove('hidden');
+    $('#openLetterBtn').textContent = 'Thư đã mở ♡';
+    $('#openLetterBtn').disabled = true;
+    burstSparkles(30);
+    $('#letterContent').scrollIntoView({behavior:'smooth',block:'center'});
+  });
+
+  function burstSparkles(count){
+    for(let i=0;i<count;i++){
+      const s=document.createElement('span');
+      s.className='sparkle'; s.textContent=Math.random()>.5?'✦':'✧';
+      s.style.left=(Math.random()*100)+'vw';
+      s.style.top=(Math.random()*85)+'vh';
+      s.style.fontSize=(10+Math.random()*20)+'px';
+      s.style.animationDelay=(Math.random()*1.5)+'s';
+      document.body.appendChild(s);
+      setTimeout(()=>s.remove(),3500);
+    }
+  }
+  function makePetal(){
+    const p=document.createElement('span');
+    p.className='petal'; p.textContent=Math.random()>.5?'✿':'❀';
+    p.style.left=Math.random()*100+'vw';
+    p.style.fontSize=(12+Math.random()*18)+'px';
+    p.style.setProperty('--drift',((Math.random()-.5)*35)+'vw');
+    p.style.animationDuration=(7+Math.random()*8)+'s';
+    document.body.appendChild(p);
+    setTimeout(()=>p.remove(),16000);
+  }
+  setInterval(makePetal,900);
+  setInterval(()=>{ if(Math.random()>.45) burstSparkles(1); },650);
+
+  const modal=$('#photoModal'), modalImage=$('#modalImage');
+  const orbit = $('#orbit');
+  function arrangePhotos(){
+    const buttons = [...orbit.querySelectorAll('.photo')];
+    const rect = orbit.getBoundingClientRect();
+    const rx = rect.width * (window.innerWidth < 480 ? 0.37 : 0.39);
+    const ry = rect.height * (window.innerWidth < 480 ? 0.37 : 0.39);
+    buttons.forEach((btn, i) => {
+      const angle = (-Math.PI/2) + (i * 2*Math.PI/buttons.length);
+      btn.style.left = `calc(50% + ${Math.cos(angle)*rx}px)`;
+      btn.style.top = `calc(50% + ${Math.sin(angle)*ry}px)`;
+      btn.style.transform = `translate(-50%, -50%) rotate(${(i%2 ? 6 : -6)}deg)`;
+      btn.style.animationDelay = `${i * -0.35}s`;
+    });
+  }
+  window.addEventListener('resize', arrangePhotos);
+  arrangePhotos();
+  document.querySelectorAll('.photo').forEach((btn)=>{
+    const src=btn.dataset.photo;
+    const img=document.createElement('img');
+    img.src=src; img.alt='Ảnh kỷ niệm';
+    img.onerror=()=>{img.remove();};
+    img.onload=()=>{const ph=btn.querySelector('.placeholder'); if(ph)ph.remove();};
+    btn.appendChild(img);
+    btn.addEventListener('click',()=>{
+      if(!img.complete || !img.naturalWidth){
+        alert('Ảnh này đang là vị trí mẫu. Hãy thêm ảnh vào thư mục photos và đặt đúng tên photo1.jpg, photo2.jpg...');
+        return;
+      }
+      modalImage.src=src; modal.classList.remove('hidden');
+    });
+  });
+  $('#closeModal').addEventListener('click',()=>modal.classList.add('hidden'));
+  modal.addEventListener('click',(e)=>{if(e.target===modal)modal.classList.add('hidden')});
+  document.addEventListener('keydown',(e)=>{if(e.key==='Escape')modal.classList.add('hidden')});
+  burstSparkles(45);
+</script>
+</body>
+</html>
